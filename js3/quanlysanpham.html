@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng quản lý sản phẩm</title>
+    <link rel="stylesheet" href="quanlysanpham.css">
+</head>
+<body>
+    <h2>Ứng dụng quản lý sản phẩm</h2>
+
+    <section>
+        <h3>Thêm sản phẩm mới</h3>
+        <form onsubmit="themSanPham(); return false;">
+            <input type="text" id="tenMoi" placeholder="Nhập tên sản phẩm">
+            <button type="submit">Thêm</button>
+        </form>
+    </section>
+
+    <section>
+        <h3>Sửa sản phẩm</h3>
+        <form onsubmit="suaSanPham(); return false;">
+            <input type="text" id="tenSua" placeholder="Nhấn vào tên trong danh sách để sửa">
+            <button type="submit">Sửa</button>
+        </form>
+    </section>
+
+    <section>
+        <h3>Danh sách sản phẩm <span id="soLuong"></span></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Xoá</th>
+                </tr>
+            </thead>
+            <tbody id="dsBody"></tbody>
+        </table>
+    </section>
+
+    <script src="quanlysanpham.js"></script>
+</body>
+</html>
