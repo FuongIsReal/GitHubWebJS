@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số ngày trong tháng</title>
+    <link rel="stylesheet" href="songaytrongthang.css">
+</head>
+<body>
+    <h2>Tính số ngày trong tháng</h2>
+
+    <div class="khung">
+        <form onsubmit="tinhSoNgay(); return false;">
+            <input type="number" id="thang" min="1" max="12" placeholder="Nhập số tháng (1-12)">
+            <button type="submit">Tính số ngày</button>
+        </form>
+        <p id="ketqua"></p>
+    </div>
+
+    <script src="songaytrongthang.js"></script>
+</body>
+</html>
