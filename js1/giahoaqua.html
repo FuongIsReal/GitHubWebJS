@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giá hoa quả</title>
+    <link rel="stylesheet" href="giahoaqua.css">
+</head>
+<body>
+    <div class="khung">
+        <h2>Giá hoa quả</h2>
+
+        <form onsubmit="xemGia(); return false;">
+            <input type="text" id="ten_hoa_qua" placeholder="Nhập tên hoa quả">
+            <button type="submit">Xem giá</button>
+        </form>
+
+        <p id="ketqua"></p>
+    </div>
+
+    <script>
+        function xemGia() {
+            // Lấy tên nhập vào, bỏ khoảng trắng thừa và đổi về chữ thường để so sánh
+            const ten = document.getElementById("ten_hoa_qua").value.trim().toLowerCase();
+            const ketQua = document.getElementById("ketqua");
+
+            let gia;
+            switch (ten) {
+                case "ổi":
+                case "dưa hấu":
+                    gia = 20000;
+                    break;
+                case "táo":
+                    gia = 30000;
+                    break;
+                case "cam":
+                case "chôm chôm":
+                    gia = 40000;
+                    break;
+                case "măng cụt":
+                    gia = 50000;
+                    break;
+                default:
+                    gia = null;
+            }
+
+            if (gia === null) {
+                ketQua.className = "loi";
+                ketQua.textContent = "Tìm không thấy";
+            } else {
+                ketQua.className = "";
+                ketQua.textContent = gia + " VNĐ/kg";
+            }
+        }
+    </script>
+</body>
+</html>
