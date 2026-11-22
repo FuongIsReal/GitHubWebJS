@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi năm dương lịch sang năm âm lịch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        input { padding: 6px; width: 120px; }
+        button { padding: 6px 14px; }
+        #ketqua {
+            margin-top: 16px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <h2>Đổi năm dương lịch sang năm âm lịch</h2>
+
+    <label>Nhập năm dương lịch: <input type="number" id="namDuong"></label>
+    <button onclick="doiNam()">Xem năm âm lịch</button>
+
+    <p id="ketqua"></p>
+
+    <script src="amlich.js"></script>
+</body>
+</html>
